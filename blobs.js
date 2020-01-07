@@ -3,6 +3,7 @@
         
         let blobs=new Array();
         const blobCount=100;
+        let speed=1;
         
         class Blob{
             constructor(color,size){
@@ -10,8 +11,8 @@
                 this.size = size;
                 this.x = Math.random()*(canvas.width-this.size);
                 this.y = Math.random()*(canvas.height-this.size);                
-                this.xChange = Math.random();
-                this.yChange = Math.random();
+                this.xChange = Math.random()*speed;
+                this.yChange = Math.random()*speed;
             }
 
             move(){
@@ -62,9 +63,6 @@
                 obj.move();
             })      
             }
-
-
-
         
         for(let i=0;i<blobCount;i++){            
             blobs.push(new Blob(getRandomColor(),Math.random()*50));
