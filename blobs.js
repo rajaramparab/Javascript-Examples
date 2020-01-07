@@ -1,6 +1,8 @@
         const canvas=document.getElementById("myCanvas");
         const context=canvas.getContext("2d");
-        
+        canvas.height=innerHeight;
+        canvas.width=innerWidth;
+
         let blobs=new Array();
         const blobCount=100;
         let speed=1;
@@ -39,7 +41,7 @@
                     gradient.addColorStop("1", "red");                    
                 */
 
-                context.strokeStyle= "lightblue";
+                context.strokeStyle=this.color;
                 context.lineWidth=5;
                 context.stroke();
                 context.fill();
