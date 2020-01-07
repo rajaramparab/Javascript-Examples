@@ -65,7 +65,7 @@
             }
         
         for(let i=0;i<blobCount;i++){            
-            blobs.push(new Blob(getRandomColor(),Math.random()*50));
+            blobs.push(new Blob(getRandomColor(),Math.random()*(canvas.width/25)));
 
         }  
         
